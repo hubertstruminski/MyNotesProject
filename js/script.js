@@ -59,7 +59,7 @@ function createNote()
 	});
 
 	btnClose.addEventListener("click", function(){
-		
+		 container.parentNode.removeChild(container);
 	});
 
 

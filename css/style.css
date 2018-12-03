@@ -80,3 +80,21 @@ h1
 {
 	max-height: 25px;
 }
+article
+{
+	text-align: center;
+}
+article h2
+{
+	font-size: 42px;
+	font-weight: 500;
+}
+section
+{
+	top: 14em;
+	right: 0;
+	position: absolute;
+	border: 1px solid black;
+	width: 400px;
+	height: 600px;
+}
