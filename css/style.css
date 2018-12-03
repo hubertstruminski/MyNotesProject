@@ -55,17 +55,6 @@ h1
 	margin-left: 5px;
 
 }
-.buttonSave
-{
-	width: 50px;
-	height: 25px;
-	top: 0;
-	right: 25px;
-	float: left;
-	font-size: 12px;
-	text-align: center;
-	margin-right: 5px;
-}
 .buttonClose
 {
 	width: 50px;
@@ -96,5 +85,21 @@ section
 	position: absolute;
 	border: 1px solid black;
 	width: 400px;
-	height: 600px;
+	min-height: 600px;
+}
+.btnLiClass
+{
+	min-width: 250px;
+	min-height: 25px;
+}
+#btnAll
+{
+	min-width: 250px;
+	min-height: 50px;
+	background-color: #2196F3;
+	border: 1px solid black;
+	color: black;
+	font-size: 22px;
+	bottom: 0;
+	margin-top: 17em;
 }

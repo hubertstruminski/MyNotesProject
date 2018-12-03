@@ -1,16 +1,20 @@
 var btn = document.getElementById("btnImage");
 var article = document.querySelector("article");
-
+var ul = document.querySelector("ul");
+var btnRemoveAll = document.getElementById("btnAll");
 var title = document.getElementsByClassName("title");
 
-var count = 0;
-var titleTxtAreaCount = 0;
-var number = 0;
-function dropdown()
-{
+var liElements = document.getElementsByClassName("liSavedClass");
+var btnLiSaved = document.getElementsByClassName("btnLiClass");
 
-	title.innerHTML = "<textarea>Set title</textarea>";
-}
+
+var count = 0;
+var number = 0;
+var grow = true;
+var counterLiElements = 0;
+
+var growEnter = true;
+
 function createNote()
 {
 	var container = document.createElement("div");
@@ -24,20 +28,13 @@ function createNote()
 
 	var title = document.createElement("div");
 	title.classList.add("title");
-	title.setAttribute("onclick", "dropdown()");
-	title.textContent = "Title " + count;
+	title.textContent = count + ". " + "Title " + count;
 
 	var btnClose = document.createElement("input");
 	btnClose.setAttribute("type", "submit");
 	btnClose.classList.add("buttonClose");
 	btnClose.setAttribute("value", "X");
 
-	var btnSave = document.createElement("input");
-	btnSave.setAttribute("type", "submit");
-	btnSave.classList.add("buttonSave");
-	btnSave.setAttribute("value", "Save");
-
-	headerNote.appendChild(btnSave);
 	headerNote.appendChild(btnClose);
 	headerNote.appendChild(title);
 	container.appendChild(headerNote);
@@ -59,10 +56,47 @@ function createNote()
 	});
 
 	btnClose.addEventListener("click", function(){
-		 container.parentNode.removeChild(container);
+		 container.style.visibility = "hidden";
+		 grow = false;
 	});
 
+	var mainTextAreaElements = document.getElementsByClassName("textareaClass");
 
+	mainTextAreaElements[0].addEventListener("keypress", function key(e){
+		if(e.keyCode == 13){
+			var li = document.createElement("li");
+			li.classList.add("liSavedClass");
+
+			var btnLi = document.createElement("input");
+			btnLi.classList.add("btnLiClass");
+			btnLi.setAttribute("type", "submit");
+			btnLi.setAttribute("value", title.textContent);
+
+			li.appendChild(btnLi);
+			ul.appendChild(li);
+
+			var btnLiElements = document.getElementsByClassName("btnLiClass");
+
+			btnLiElements[0].addEventListener("click", function(){
+				if(grow == false){
+					container.style.visibility = "visible";
+					grow = true;
+				}else{
+					container.style.visibility = "hidden";
+					grow = false;
+				}
+			});
+			mainTextAreaElements[0].removeEventListener("keypress", key);
+		}
+	});
+
+	btnRemoveAll.addEventListener("click", function(){
+		var elements = document.getElementsByClassName("liSavedClass");
+
+		for(var i=elements.length-1; i>= 0; i--){
+			elements[i].parentNode.removeChild(elements[i]);
+		}
+	});
 
 	count++;
 }
@@ -73,7 +107,4 @@ window.onload = function()
 	btnImage.addEventListener("click", function(){
 		createNote();
 	});
-
-
-
 }
