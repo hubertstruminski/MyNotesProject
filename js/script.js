@@ -9,6 +9,7 @@ var btnLiElements = document.getElementsByClassName("btnLiClass");
 var count = 0;
 var number = 0;
 var grow = true;
+var counterLiElements = 0;
 
 //----------------------------
 var divX = 0;
@@ -123,11 +124,11 @@ function createNote()
 
 
 	btnSave.addEventListener("click", function(){
-		btnLiElements[count].setAttribute("value", title.textContent);
-		btnLiElements[count].style.color = "black";
-		btnLiElements[count].style.backgroundColor = "#ef854c";
+		btnLiElements[counterLiElements].setAttribute("value", title.textContent);
+		btnLiElements[counterLiElements].style.color = "black";
+		btnLiElements[counterLiElements].style.backgroundColor = "#ef854c";
 
-		btnLiElements[count].addEventListener("click", function(){
+		btnLiElements[counterLiElements].addEventListener("click", function(){
 			if(grow == false){
 				container.style.visibility = "visible";
 				grow = true;
@@ -136,6 +137,7 @@ function createNote()
 				grow = false;
 			}
 		});	
+		++counterLiElements;
 	});
 
 	btnRemoveAll.addEventListener("click", function(){
