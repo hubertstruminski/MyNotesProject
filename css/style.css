@@ -9,3 +9,74 @@ h1
 	margin-left: 10em;
 	font-weight: 500;
 }
+#image
+{
+	margin-left: 19em;
+	float: left;
+}
+#description
+{
+	float: left;
+	margin-top: 2em;
+}
+#description h3
+{
+	font-weight: 500;
+}
+/*generate self notes*/
+.container
+{
+	position: absolute;
+	background-color: #f1f1f1;
+	border: 1px solid #d3d3d3;
+	text-align: center;
+	z-index: 9;
+}
+.headerClass
+{
+	padding: 10px;
+	cursor: move;
+	z-index: 10;
+	background-color: #2196F3;
+	color: #fff;
+	min-height: 25px;
+}
+.textareaClass
+{
+	min-height: 200px;
+	min-width: 300px;
+}
+.title
+{
+	left: 0;
+	text-align: left;
+	float: left;
+	line-height: 175%;
+	margin-left: 5px;
+
+}
+.buttonSave
+{
+	width: 50px;
+	height: 25px;
+	top: 0;
+	right: 25px;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	margin-right: 5px;
+}
+.buttonClose
+{
+	width: 50px;
+	height: 25px;
+	top: 0;
+	right: 0;
+	float: left;
+	text-align: center;
+	line-height: 20%;
+}
+.txtAreaTitle
+{
+	max-height: 25px;
+}
