@@ -46,6 +46,13 @@ h1
 	min-height: 200px;
 	min-width: 300px;
 }
+.footerClass
+{
+	min-height: 25px;
+	background-color: #2196F3;
+	padding: 10px;
+	z-index: 10;
+}
 .title
 {
 	left: 0;
@@ -54,6 +61,21 @@ h1
 	line-height: 175%;
 	margin-left: 5px;
 
+}
+.buttonSave
+{
+	width: 50px;
+	height: 25px;
+	top: 0;
+	right: 25px;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	margin-right: 5px;
+	background-color: #ef854c;
+	border: 1px solid #934114;
+	border-radius: 7px;
+	cursor: pointer;
 }
 .buttonClose
 {
@@ -64,6 +86,32 @@ h1
 	float: left;
 	text-align: center;
 	line-height: 20%;
+	background-color: #ef854c;
+	border: 1px solid #934114;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.buttonMinus
+{
+	width: 50px;
+	height: 25px;
+	text-align: center;
+	line-height: 20%;
+	background-color: #ef854c;
+	border: 1px solid #934114;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.buttonPlus
+{
+	width: 50px;
+	height: 25px;
+	text-align: center;
+	line-height: 20%;
+	background-color: #ef854c;
+	border: 1px solid #934114;
+	border-radius: 7px;
+	cursor: pointer;
 }
 .txtAreaTitle
 {
@@ -86,11 +134,21 @@ section
 	border: 1px solid black;
 	width: 400px;
 	min-height: 600px;
+	border-radius: 25px 0 0 25px;
+}
+ul > li
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 .btnLiClass
 {
 	min-width: 250px;
-	min-height: 25px;
+	min-height: 50px;
+	background-color: #2196F3;
+	border: 1px solid #153b77;
+	color: #666;
+	border-radius: 25px;
 }
 #btnAll
 {
@@ -98,8 +156,14 @@ section
 	min-height: 50px;
 	background-color: #2196F3;
 	border: 1px solid black;
-	color: black;
+	color: #666;
 	font-size: 22px;
 	bottom: 0;
-	margin-top: 17em;
+	margin-top: 3em;
+	border-radius:  25px;
 }
+#btnAll:hover
+{
+	background-color: #ef854c;
+	color: black;
+}#ef854c
